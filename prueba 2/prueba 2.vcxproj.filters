@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Modelos">
+      <UniqueIdentifier>{6752eedd-6e8c-46e1-a563-a82156281946}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Modelos">
+      <UniqueIdentifier>{ef096b90-5290-48f3-a70b-81a5d501fe14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Enumerables">
+      <UniqueIdentifier>{2065e04c-c3ba-42c6-86f0-9e5c5f6a2333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\controladores">
+      <UniqueIdentifier>{d77482d3-6451-4e59-b4c7-2e566158e263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Controladores">
+      <UniqueIdentifier>{ebc5f972-9507-474c-8712-ebe0107bd38e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Enumerables">
+      <UniqueIdentifier>{eb0ad4e2-41a8-4170-9f20-7f4833f7ba45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ModeloUsuario.cpp">
+      <Filter>Archivos de origen\Modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="usuario.cpp">
+      <Filter>Archivos de origen\Controladores</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="OpcionesUsuario.cpp">
+      <Filter>Archivos de origen\Enumerables</Filter>
+    </ClCompile>
+    <ClCompile Include="OpcionesMenu.cpp">
+      <Filter>Archivos de origen\Enumerables</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ModeloUsuario.h">
+      <Filter>Archivos de encabezado\Modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="usuario.h">
+      <Filter>Archivos de encabezado\controladores</Filter>
+    </ClInclude>
+    <ClInclude Include="OpcionesUsuario.h">
+      <Filter>Archivos de encabezado\Enumerables</Filter>
+    </ClInclude>
+    <ClInclude Include="OpcionesMenu.h">
+      <Filter>Archivos de encabezado\Enumerables</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
