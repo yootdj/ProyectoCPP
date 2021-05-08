@@ -31,6 +31,12 @@
     <Filter Include="Archivos de encabezado\Enumerables">
       <UniqueIdentifier>{eb0ad4e2-41a8-4170-9f20-7f4833f7ba45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Herramientas">
+      <UniqueIdentifier>{490506da-a082-4492-909a-ac42d820e8bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Herramientas">
+      <UniqueIdentifier>{3f0e39c6-557c-4696-b017-065bd0ad277d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModeloUsuario.cpp">
@@ -48,6 +54,9 @@
     <ClCompile Include="OpcionesMenu.cpp">
       <Filter>Archivos de origen\Enumerables</Filter>
     </ClCompile>
+    <ClCompile Include="Herramientas.cpp">
+      <Filter>Archivos de origen\Herramientas</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ModeloUsuario.h">
@@ -61,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="OpcionesMenu.h">
       <Filter>Archivos de encabezado\Enumerables</Filter>
+    </ClInclude>
+    <ClInclude Include="Herramientas.h">
+      <Filter>Archivos de encabezado\Herramientas</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
