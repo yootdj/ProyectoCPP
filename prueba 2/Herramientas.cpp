@@ -12,3 +12,7 @@ void limpiarPantalla()
 	system("clear");
 #endif
 }
+void TiempoEsperaPantalla()
+{
+	system("pause");
+}

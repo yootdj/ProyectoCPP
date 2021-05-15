@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 enum class OpcionesUsuario : int
 {
 	Ninguno,
@@ -11,3 +11,5 @@ enum class OpcionesUsuario : int
 	CargarArhivo,
 	salir
 };
+
+std::istream& operator>> (std::istream& in, OpcionesUsuario& opcionesUsuario);

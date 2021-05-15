@@ -1,9 +1,5 @@
 #include "usuario.h"
-
-//contructor por deecto
-Usuario::Usuario()
-{
-}
+#include "Herramientas.h"
 
 //metodo
 
@@ -13,15 +9,53 @@ void Usuario::MostrarMenuUsuarios()
 	//crearemos la variable para guardar la opcion seleccionada y la inizializemos en ninguno
 	OpcionesUsuario opcionUsuario = OpcionesUsuario::Ninguno;
 
+	ModeloUsuario* usuario = NULL;
+
 	//mostraremos el menu de usuarioasta seleccionar la opcion salur
 	while (opcionUsuario != OpcionesUsuario::salir)
 	{
+		limpiarPantalla();
+
+		std::cout << "1- agregar usuario nuevo" << std::endl;
+		std::cout << "2- editar usuario" << std::endl;
+		std::cout << "3- consultar usuario" << std::endl;
+		std::cout << "4- mostrar lista de usuarios" << std::endl;
+		std::cout << "7- salir  del menu usuarios" << std::endl;
+
+		std::cin >> opcionUsuario;
+
 		switch (opcionUsuario)
 		{
+		case OpcionesUsuario::Agregar:
+			AgregarUsuario();
+			break;
+		case OpcionesUsuario::Editar:
+			EditarUsuario();
+			break;
+		case OpcionesUsuario::Consultar:
+			usuario = ConsultarUsuario();
+			if (usuario != NULL)
+			{
+				std::cout << usuario->toString() << std::endl;
+			}
+			else
+			{
+				std::cout << "No se encontro el usuario." << std::endl;
+			}
+			break;
+		case OpcionesUsuario::Lista:
+			MostrarListaUsuarios();
+			break;
+		case OpcionesUsuario::salir:
+			std::cout << "Se esta saliendo del menu de usuarios." << std::endl;
+			break;
 		default:
-			std::cout << "La opcon seleccionada no es valida" << std::endl;
+			opcionUsuario = OpcionesUsuario::Ninguno;
+			std::cout << "La opcion seleccionada no es valida" << std::endl;
 			break;
 		}
+
+		TiempoEsperaPantalla();
 	}
 }
 
@@ -96,7 +130,7 @@ void Usuario::MostrarListaUsuarios()
 {
 	if (listaUsuarios.size() == 0)
 	{
-		std::cout << "no se encontraron usuarios para mostrar.";
+		std::cout << "no se encontraron usuarios para mostrar." << std::endl;
 	}
 	else
 	{
@@ -197,6 +231,8 @@ void Usuario::EditarUsuario()
 
 		std::cout << "ingrese su contraseña: " << std::endl;
 		getline(std::cin, usuarioEditar->password);
+
+		std::cout << "se edit exitosamente." << std::endl;
 	}
 	else
 	{

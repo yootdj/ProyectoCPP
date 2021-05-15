@@ -11,8 +11,6 @@
 
 int main()
 {
-	ModeloUsuario* usuario = NULL;
-
 	OpcionesMenu opcionSeleccionada = OpcionesMenu::Ninguno;
 
 	//Usuario::CargarUsuarios();
@@ -34,48 +32,19 @@ int main()
 		switch (opcionSeleccionada)
 		{
 		case OpcionesMenu::Usuarios:
+			Usuario::MostrarMenuUsuarios();
 			break;
 		case OpcionesMenu::Salir:
 			std::cout << "hasta luego" << std::endl;
+			TiempoEsperaPantalla();
 			break;
 		default:
-			std::cout << " opcion seleccionada no es valida" << std::endl;
 			opcionSeleccionada = OpcionesMenu::Ninguno;
+			std::cout << " opcion seleccionada no es valida" << std::endl;
+			TiempoEsperaPantalla();
 			break;
 		}
 
-		//switch (opcionSeleccionada)
-		//{
-		//case OpcionesMenu::AgregarUsuario:
-		//	Usuario::AgregarUsuario();
-		//	break;
-		//case OpcionesMenu::EditarUusiario:
-		//	Usuario::EditarUsuario();
-		//	break;
-		//case OpcionesMenu::ConsultarUsuario:
-		//	usuario = Usuario::ConsultarUsuario();
-		//	if (usuario != NULL)
-		//	{
-		//		std::cout << usuario->toString() << std::endl;
-		//	}
-		//	else
-		//	{
-		//		std::cout << "no encontro el usuario" << std::endl;
-		//	}
-		//	break;
-		//case OpcionesMenu::ListaUsuarios:
-		//	Usuario::MostrarListaUsuarios();
-		//	break;
-		//case OpcionesMenu::GuardarUsuarios:
-		//	Usuario::GuardarUsuarios();
-		//	break;
-		//case OpcionesMenu::Salir:
-		//	exit(EXIT_SUCCESS);
-		//	break;
-		//default:
-		//	std::cout << "la opcion seleccionada no es valida" << std::endl;
-		//	break;
-		//}
 		std::cin.clear();
 	}
 
