@@ -1,11 +1,11 @@
 #include "usuario.h"
-#include "Herramientas.h"
 
 //metodo
 
 //con este metodo mostraremos la opciones de usuario
 void Usuario::MostrarMenuUsuarios()
 {
+	CargarUsuarios();
 	//crearemos la variable para guardar la opcion seleccionada y la inizializemos en ninguno
 	OpcionesUsuario opcionUsuario = OpcionesUsuario::Ninguno;
 
@@ -47,6 +47,7 @@ void Usuario::MostrarMenuUsuarios()
 			MostrarListaUsuarios();
 			break;
 		case OpcionesUsuario::salir:
+			GuardarUsuarios();
 			std::cout << "Se esta saliendo del menu de usuarios." << std::endl;
 			break;
 		default:
@@ -254,12 +255,13 @@ void Usuario::GuardarUsuarios()
 	archivoUsuarios.open("usuarios.data", std::ostream::binary | std::ostream::app);
 
 	//se recorre la lista de usuarios
-	for (auto usuario : listaUsuarios)
+	for (ModeloUsuario* usuario : listaUsuarios)
 	{
+		ModeloUsuario usuarioObjeto = ConvertirUsuarioObjeto(usuario);
 		//se guarda cada uno de los usuarios en el archivo
 		// (char*)& usuario se convierte el usuario a texto para guardarlo
 		//size of (usuario) obtiene ewl tamaño del objeto apra saber cuanto espacio se va atomar  en el archivo
-		archivoUsuarios.write((char*)&usuario, sizeof(usuario));
+		archivoUsuarios.write(reinterpret_cast<char*>(&usuarioObjeto), sizeof(ModeloUsuario));
 	}
 
 	//se cierra el archivo
@@ -268,24 +270,31 @@ void Usuario::GuardarUsuarios()
 
 void Usuario::CargarUsuarios()
 {
-	std::ifstream archivousuarios;
-
-	archivousuarios.open("usuarios.data", std::istream::binary);
-
-	while (!archivousuarios.eof())
+	if (std::filesystem::exists("usuarios.data"))
 	{
-		//creamos una variable para guardar el usuario leido
-		ModeloUsuario* usuarioArchivo = nullptr;
-		//leemos el usuario para guardarlo en la variable usuario archivo
-		archivousuarios.read((char*)&usuarioArchivo, sizeof(usuarioArchivo));
+		std::ifstream archivousuarios;
+		archivousuarios.open("usuarios.data", std::istream::binary);
 
-		if (usuarioArchivo == nullptr) break;
+		while (true)
+		{
+			//creamos una variable para guardar el usuario leido
+			ModeloUsuario usuarioArchivo;
+			//leemos el usuario para guardarlo en la variable usuario archivo
+			archivousuarios.read(reinterpret_cast<char*>(&usuarioArchivo), sizeof(ModeloUsuario));
 
-		//guardamos el ususuario leido del archivo en la lista de usuarios
-		listaUsuarios.push_back(usuarioArchivo);
+			if (!usuarioArchivo.nombre.empty())
+			{
+				//guardamos el ususuario leido del archivo en la lista de usuarios
+				listaUsuarios.push_back(ConvertirUsuarioApuntador(usuarioArchivo));
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		//cerramos el archivo
+		archivousuarios.close();
 	}
-	//cerramos el archivo
-	archivousuarios.close();
 }
-
 std::list<ModeloUsuario*> Usuario::listaUsuarios = std::list <ModeloUsuario*>();
