@@ -70,62 +70,23 @@ void Usuario::AgregarUsuario()
 	ModeloUsuario* nuevoUsuario = CrearUsuario();
 	listaUsuarios.push_back(nuevoUsuario);
 
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	LeerDatoConsola("ingrese el nombre de usuario: ", nuevoUsuario->nombre, false);
 
-	std::cout << "Ingrese el nombre del usuario: " << std::endl;
-	getline(std::cin, nuevoUsuario->nombre);
+	LeerDatoConsola("ingrese el apellido paterno: ", nuevoUsuario->apellidoPaterno, false);
 
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	LeerDatoConsola("ingrese el apellido materno: ", nuevoUsuario->apellidoMaterno, false);
 
-	std::cout << "Ingrese el apellido paterno: " << std::endl;
-	getline(std::cin, nuevoUsuario->apellidoPaterno);
+	LeerDatoConsola("ingrese el alias: ", nuevoUsuario->alias, true);
 
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	LeerDatoConsola("ingrese su año de nacimiento: ", nuevoUsuario->aniodenacimiento);
 
-	std::cout << "Ingrese el apellido materno: " << std::endl;
-	getline(std::cin, nuevoUsuario->apellidoMaterno);
+	LeerDatoConsola("ingrese su mes de nacimiento: ", nuevoUsuario->mesdenacimiento);
 
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	LeerDatoConsola("ingrese su dia de nacimiento: ", nuevoUsuario->diadenacimiento);
 
-	std::cout << "Ingrese su alias: " << std::endl;
-	getline(std::cin, nuevoUsuario->alias);
+	LeerDatoConsola("ingrese su correo electronico: ", nuevoUsuario->correoElectronico, true);
 
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	std::cout << "ingrese su año de nacimiento: " << std::endl;
-	std::cin >> nuevoUsuario->aniodenacimiento;
-
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	std::cout << "ingrese su mes de nacimiento: " << std::endl;
-	std::cin >> nuevoUsuario->mesdenacimiento;
-
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	std::cout << "ingrese su dia de nacimiento: " << std::endl;
-	std::cin >> nuevoUsuario->diadenacimiento;
-
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	std::cout << "ingrese su correo electronico: " << std::endl;
-	getline(std::cin, nuevoUsuario->correoElectronico);
-
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	std::cout << "ingrese su contraseña: " << std::endl;
-	getline(std::cin, nuevoUsuario->password);
-
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	LeerDatoConsola("ingrese su contraseña: ", nuevoUsuario->password, true);
 }
 void Usuario::MostrarListaUsuarios()
 {
@@ -154,8 +115,7 @@ ModeloUsuario* Usuario::ConsultarUsuario()
 
 		std::cout << "ingrese el nombre completo del usuario a consultar incluyendo espacios";
 
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		limpiarCin();
 
 		getline(std::cin, nombreCompleto);
 
@@ -179,59 +139,23 @@ void Usuario::EditarUsuario()
 	ModeloUsuario* usuarioEditar = ConsultarUsuario();
 	if (usuarioEditar != NULL)
 	{
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		LeerDatoConsola("ingrese el nombre de usuario: ", usuarioEditar->nombre, false);
 
-		std::cout << "Ingrese el nombre del usuario: " << std::endl;
-		getline(std::cin, usuarioEditar->nombre);
+		LeerDatoConsola("ingrese el apellido paterno: ", usuarioEditar->apellidoPaterno, false);
 
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		LeerDatoConsola("ingrese el apellido materno: ", usuarioEditar->apellidoMaterno, false);
 
-		std::cout << "Ingrese el apellido paterno: " << std::endl;
-		getline(std::cin, usuarioEditar->apellidoPaterno);
+		LeerDatoConsola("ingrese el alias: ", usuarioEditar->alias, true);
 
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		LeerDatoConsola("ingrese su año de nacimiento: ", usuarioEditar->aniodenacimiento);
 
-		std::cout << "Ingrese el apellido materno: " << std::endl;
-		getline(std::cin, usuarioEditar->apellidoMaterno);
+		LeerDatoConsola("ingrese su mes de nacimiento: ", usuarioEditar->mesdenacimiento);
 
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		LeerDatoConsola("ingrese su dia de nacimiento: ", usuarioEditar->diadenacimiento);
 
-		std::cout << "Ingrese su alias: " << std::endl;
-		getline(std::cin, usuarioEditar->alias);
+		LeerDatoConsola("ingrese su correo electronico: ", usuarioEditar->correoElectronico, true);
 
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		std::cout << "ingrese su año de nacimiento: " << std::endl;
-		std::cin >> usuarioEditar->aniodenacimiento;
-
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		std::cout << "ingrese su mes de nacimiento: " << std::endl;
-		std::cin >> usuarioEditar->mesdenacimiento;
-
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		std::cout << "ingrese su dia de nacimiento: " << std::endl;
-		std::cin >> usuarioEditar->diadenacimiento;
-
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		std::cout << "ingrese su correo electronico: " << std::endl;
-		getline(std::cin, usuarioEditar->correoElectronico);
-
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		std::cout << "ingrese su contraseña: " << std::endl;
-		getline(std::cin, usuarioEditar->password);
+		LeerDatoConsola("ingrese su contraseña: ", usuarioEditar->password, true);
 
 		std::cout << "se edit exitosamente." << std::endl;
 	}
@@ -240,8 +164,11 @@ void Usuario::EditarUsuario()
 		std::cout << "el usuario no existe" << std::endl;
 	}
 }
+
 void Usuario::GuardarUsuarios()
 {
+	// todo este returnal es temporal
+	return;
 	//variable para utilizar un archivo
 	std::ofstream archivoUsuarios;
 	//detectamos si el archivo exista para borrarlo
@@ -270,12 +197,13 @@ void Usuario::GuardarUsuarios()
 
 void Usuario::CargarUsuarios()
 {
-	if (std::filesystem::exists("usuarios.data"))
+	return;
+	if (std::filesystem::exists("usuarios.data") && !listaUsuarios.empty())
 	{
 		std::ifstream archivousuarios;
 		archivousuarios.open("usuarios.data", std::istream::binary);
 
-		while (true)
+		while (!archivousuarios.eof())
 		{
 			//creamos una variable para guardar el usuario leido
 			ModeloUsuario usuarioArchivo;
@@ -286,10 +214,6 @@ void Usuario::CargarUsuarios()
 			{
 				//guardamos el ususuario leido del archivo en la lista de usuarios
 				listaUsuarios.push_back(ConvertirUsuarioApuntador(usuarioArchivo));
-			}
-			else
-			{
-				break;
 			}
 		}
 

@@ -11,6 +11,8 @@
 
 int main()
 {
+	ConfigurarCaracteres();
+
 	OpcionesMenu opcionSeleccionada = OpcionesMenu::Ninguno;
 
 	//Usuario::CargarUsuarios();

@@ -57,6 +57,12 @@
     <ClCompile Include="Herramientas.cpp">
       <Filter>Archivos de origen\Herramientas</Filter>
     </ClCompile>
+    <ClCompile Include="Base64.cpp">
+      <Filter>Archivos de origen\Herramientas</Filter>
+    </ClCompile>
+    <ClCompile Include="LeerDatosConsola.cpp">
+      <Filter>Archivos de origen\Herramientas</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ModeloUsuario.h">
@@ -72,6 +78,12 @@
       <Filter>Archivos de encabezado\Enumerables</Filter>
     </ClInclude>
     <ClInclude Include="Herramientas.h">
+      <Filter>Archivos de encabezado\Herramientas</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64.h">
+      <Filter>Archivos de encabezado\Herramientas</Filter>
+    </ClInclude>
+    <ClInclude Include="LeerDatosConsola.h">
       <Filter>Archivos de encabezado\Herramientas</Filter>
     </ClInclude>
   </ItemGroup>

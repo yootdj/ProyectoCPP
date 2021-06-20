@@ -46,3 +46,14 @@ ModeloUsuario ConvertirUsuarioObjeto(ModeloUsuario* usuario)
 
 	return usuarioObjeto;
 }
+
+std::locale ConfigurarCaracteres()
+{
+	return std::locale::global(std::locale("Spanish.UTF-8"));
+}
+
+void limpiarCin()
+{
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}

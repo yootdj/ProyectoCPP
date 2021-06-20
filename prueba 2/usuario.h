@@ -9,6 +9,7 @@
 
 #include "ModeloUsuario.h"
 #include "OpcionesUsuario.h"
+#include "LeerDatosConsola.h"
 
 class Usuario
 {
