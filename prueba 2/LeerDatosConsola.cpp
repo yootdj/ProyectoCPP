@@ -2,6 +2,8 @@
 
 void LeerDatoConsola(std::string mensaje, std::string& dato, bool esBase64)
 {
+	ConfigurarCaracteres();
+
 	std::string datoInterno;
 
 	do {
@@ -24,6 +26,8 @@ void LeerDatoConsola(std::string mensaje, std::string& dato, bool esBase64)
 
 void LeerDatoConsola(std::string mensaje, short& dato)
 {
+	ConfigurarCaracteres();
+
 	short datoInterno = 0;
 
 	do {

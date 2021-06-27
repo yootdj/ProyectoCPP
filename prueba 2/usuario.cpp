@@ -67,6 +67,8 @@ ModeloUsuario* Usuario::CrearUsuario()
 
 void Usuario::AgregarUsuario()
 {
+	ConfigurarCaracteres();
+
 	ModeloUsuario* nuevoUsuario = CrearUsuario();
 	listaUsuarios.push_back(nuevoUsuario);
 
@@ -76,7 +78,7 @@ void Usuario::AgregarUsuario()
 
 	LeerDatoConsola("ingrese el apellido materno: ", nuevoUsuario->apellidoMaterno, false);
 
-	LeerDatoConsola("ingrese el alias: ", nuevoUsuario->alias, true);
+	LeerDatoConsola("ingrese el alias: ", nuevoUsuario->alias, false);
 
 	LeerDatoConsola("ingrese su año de nacimiento: ", nuevoUsuario->aniodenacimiento);
 
@@ -84,7 +86,7 @@ void Usuario::AgregarUsuario()
 
 	LeerDatoConsola("ingrese su dia de nacimiento: ", nuevoUsuario->diadenacimiento);
 
-	LeerDatoConsola("ingrese su correo electronico: ", nuevoUsuario->correoElectronico, true);
+	LeerDatoConsola("ingrese su correo electronico: ", nuevoUsuario->correoElectronico, false);
 
 	LeerDatoConsola("ingrese su contraseña: ", nuevoUsuario->password, true);
 }
@@ -136,6 +138,8 @@ ModeloUsuario* Usuario::ConsultarUsuario()
 }
 void Usuario::EditarUsuario()
 {
+	ConfigurarCaracteres();
+
 	ModeloUsuario* usuarioEditar = ConsultarUsuario();
 	if (usuarioEditar != NULL)
 	{
@@ -145,7 +149,7 @@ void Usuario::EditarUsuario()
 
 		LeerDatoConsola("ingrese el apellido materno: ", usuarioEditar->apellidoMaterno, false);
 
-		LeerDatoConsola("ingrese el alias: ", usuarioEditar->alias, true);
+		LeerDatoConsola("ingrese el alias: ", usuarioEditar->alias, false);
 
 		LeerDatoConsola("ingrese su año de nacimiento: ", usuarioEditar->aniodenacimiento);
 
@@ -153,7 +157,7 @@ void Usuario::EditarUsuario()
 
 		LeerDatoConsola("ingrese su dia de nacimiento: ", usuarioEditar->diadenacimiento);
 
-		LeerDatoConsola("ingrese su correo electronico: ", usuarioEditar->correoElectronico, true);
+		LeerDatoConsola("ingrese su correo electronico: ", usuarioEditar->correoElectronico, false);
 
 		LeerDatoConsola("ingrese su contraseña: ", usuarioEditar->password, true);
 

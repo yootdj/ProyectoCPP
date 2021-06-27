@@ -2,7 +2,6 @@
 
 ModeloUsuario::ModeloUsuario()
 {
-	id = 0;
 	aniodenacimiento = 0;
 	mesdenacimiento = 0;
 	diadenacimiento = 0;

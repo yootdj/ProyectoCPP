@@ -4,7 +4,6 @@
 class ModeloUsuario
 {
 public:
-	unsigned long id;
 	std::string nombre;
 	std::string apellidoPaterno;
 	std::string apellidoMaterno;

@@ -49,7 +49,8 @@ ModeloUsuario ConvertirUsuarioObjeto(ModeloUsuario* usuario)
 
 std::locale ConfigurarCaracteres()
 {
-	return std::locale::global(std::locale("Spanish.UTF-8"));
+	// return std::locale::global(std::locale("Spanish.UTF-8"));
+	return std::locale();
 }
 
 void limpiarCin()

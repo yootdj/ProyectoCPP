@@ -148,6 +148,7 @@
     <ClCompile Include="Base64.cpp" />
     <ClCompile Include="Herramientas.cpp" />
     <ClCompile Include="LeerDatosConsola.cpp" />
+    <ClCompile Include="ModeloArticulo.cpp" />
     <ClCompile Include="ModeloUsuario.cpp" />
     <ClCompile Include="OpcionesUsuario.cpp" />
     <ClCompile Include="OpcionesMenu.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="Base64.h" />
     <ClInclude Include="Herramientas.h" />
     <ClInclude Include="LeerDatosConsola.h" />
+    <ClInclude Include="ModeloArticulo.h" />
     <ClInclude Include="ModeloUsuario.h" />
     <ClInclude Include="OpcionesMenu.h" />
     <ClInclude Include="OpcionesUsuario.h" />

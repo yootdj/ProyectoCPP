@@ -63,6 +63,9 @@
     <ClCompile Include="LeerDatosConsola.cpp">
       <Filter>Archivos de origen\Herramientas</Filter>
     </ClCompile>
+    <ClCompile Include="ModeloArticulo.cpp">
+      <Filter>Archivos de origen\Modelos</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ModeloUsuario.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="LeerDatosConsola.h">
       <Filter>Archivos de encabezado\Herramientas</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeloArticulo.h">
+      <Filter>Archivos de encabezado\Modelos</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
