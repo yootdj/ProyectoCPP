@@ -145,22 +145,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Articulos.cpp" />
     <ClCompile Include="Base64.cpp" />
     <ClCompile Include="Herramientas.cpp" />
     <ClCompile Include="LeerDatosConsola.cpp" />
     <ClCompile Include="ModeloArticulo.cpp" />
     <ClCompile Include="ModeloUsuario.cpp" />
+    <ClCompile Include="OpcionesArticulo.cpp" />
     <ClCompile Include="OpcionesUsuario.cpp" />
     <ClCompile Include="OpcionesMenu.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="usuario.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Articulo.h" />
     <ClInclude Include="Base64.h" />
     <ClInclude Include="Herramientas.h" />
     <ClInclude Include="LeerDatosConsola.h" />
     <ClInclude Include="ModeloArticulo.h" />
     <ClInclude Include="ModeloUsuario.h" />
+    <ClInclude Include="OpcionesArticulo.h" />
     <ClInclude Include="OpcionesMenu.h" />
     <ClInclude Include="OpcionesUsuario.h" />
     <ClInclude Include="usuario.h" />

@@ -7,6 +7,7 @@
 //´librerias creadas por nocotros
 #include "usuario.h"
 #include "OpcionesMenu.h"
+#include "Articulo.h"
 #include "Herramientas.h"
 
 int main()
@@ -25,7 +26,8 @@ int main()
 		//se muestra el mensaje al usuario para que seleccione una opcion del menu
 		std::cout << "seleccione una opcion del menu" << std::endl;
 		std::cout << "1 menu de usuarios" << std::endl;
-		std::cout << "2 - salir" << std::endl;
+		std::cout << "2 menu de articulos" << std::endl;
+		std::cout << "3 - salir" << std::endl;
 
 		//se guarda la opcion seleccionada del usuario en la variable opcion de tipo int
 		std::cin >> opcionSeleccionada;
@@ -35,6 +37,9 @@ int main()
 		{
 		case OpcionesMenu::Usuarios:
 			Usuario::MostrarMenuUsuarios();
+			break;
+		case OpcionesMenu::Articulos:
+			Articulo::MostrarMenuArticulos();
 			break;
 		case OpcionesMenu::Salir:
 			std::cout << "hasta luego" << std::endl;

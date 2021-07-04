@@ -16,5 +16,6 @@ public:
 	int minutosRegistro;
 	int segundosRegistros;
 
+	//Constructor
 	ModeloArticulo();
 };

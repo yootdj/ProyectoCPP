@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Archivos de encabezado\Modelos">
       <UniqueIdentifier>{6752eedd-6e8c-46e1-a563-a82156281946}</UniqueIdentifier>
     </Filter>
@@ -36,6 +32,10 @@
     </Filter>
     <Filter Include="Archivos de origen\Herramientas">
       <UniqueIdentifier>{3f0e39c6-557c-4696-b017-065bd0ad277d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -66,13 +66,16 @@
     <ClCompile Include="ModeloArticulo.cpp">
       <Filter>Archivos de origen\Modelos</Filter>
     </ClCompile>
+    <ClCompile Include="Articulos.cpp">
+      <Filter>Archivos de origen\Controladores</Filter>
+    </ClCompile>
+    <ClCompile Include="OpcionesArticulo.cpp">
+      <Filter>Archivos de origen\Enumerables</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ModeloUsuario.h">
       <Filter>Archivos de encabezado\Modelos</Filter>
-    </ClInclude>
-    <ClInclude Include="usuario.h">
-      <Filter>Archivos de encabezado\controladores</Filter>
     </ClInclude>
     <ClInclude Include="OpcionesUsuario.h">
       <Filter>Archivos de encabezado\Enumerables</Filter>
@@ -91,6 +94,15 @@
     </ClInclude>
     <ClInclude Include="ModeloArticulo.h">
       <Filter>Archivos de encabezado\Modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="Articulo.h">
+      <Filter>Archivos de encabezado\controladores</Filter>
+    </ClInclude>
+    <ClInclude Include="OpcionesArticulo.h">
+      <Filter>Archivos de encabezado\Enumerables</Filter>
+    </ClInclude>
+    <ClInclude Include="usuario.h">
+      <Filter>Archivos de encabezado\controladores</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

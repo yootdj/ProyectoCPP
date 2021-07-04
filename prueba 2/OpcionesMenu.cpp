@@ -9,6 +9,7 @@ std::istream& operator>>(std::istream& in, OpcionesMenu& opcionesMenu)
 		{
 		case OpcionesMenu::Salir:
 		case OpcionesMenu::Usuarios:
+		case OpcionesMenu::Articulos:
 			opcionesMenu = OpcionesMenu(valor);
 			break;
 		default:
